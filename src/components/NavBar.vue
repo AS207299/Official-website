@@ -111,10 +111,18 @@ onUnmounted(() => {
 
 .nav-bar.scrolled {
   padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.nav-bar.scrolled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--nav-bg-blur);
   backdrop-filter: blur(30px) saturate(1.5);
   -webkit-backdrop-filter: blur(30px) saturate(1.5);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-container {
@@ -258,28 +266,40 @@ onUnmounted(() => {
   }
 
   .nav-links {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background: var(--nav-bg-blur);
     backdrop-filter: blur(30px) saturate(1.5);
     -webkit-backdrop-filter: blur(30px) saturate(1.5);
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 120px;
+    padding-top: 100px;
+    padding-bottom: 32px;
     gap: 32px;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-smooth);
-    z-index: -1;
   }
 
   .nav-links.open {
     opacity: 1;
     pointer-events: auto;
   }
+
+  /* .nav-links.open::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(30px) saturate(1.5);
+    -webkit-backdrop-filter: blur(30px) saturate(1.5);
+    background-color: var(--nav-bg-blur);
+  } */
 
   .nav-links .nav-link {
     font-size: 1.5rem;
