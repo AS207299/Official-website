@@ -1,5 +1,5 @@
 {
-    "name": "hakuro-network-website",
+    "name": "official-website",
     "compatibility_date": "2026-02-20",
     "assets": {
         "directory": "./dist"
