@@ -112,8 +112,8 @@ onUnmounted(() => {
 .nav-bar.scrolled {
   padding: 16px 0;
   background: var(--nav-bg-blur);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px) saturate(1.5);
+  -webkit-backdrop-filter: blur(30px) saturate(1.5);
   border-bottom: 1px solid var(--color-border);
 }
 

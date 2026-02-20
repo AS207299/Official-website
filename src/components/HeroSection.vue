@@ -8,6 +8,29 @@ const { t } = useI18n()
 const heroRef = ref(null)
 const titleChars = ref([])
 const subtitleVisible = ref(false)
+const welcomeMessage = ref('')
+
+function getGreeting() {
+  const hour = new Date().getHours()
+  if (hour >= 6 && hour < 12) return 'morning'
+  if (hour >= 12 && hour < 18) return 'afternoon'
+  return 'night'
+}
+
+async function fetchLocationInfo() {
+  try {
+    const res = await fetch('https://ip-api.4eva.org/')
+    if (res.ok) {
+      const data = await res.json()
+      const asn = `AS${data.asn}`
+      const org = data.asn_org || 'Anywhere'
+      const greeting = getGreeting()
+      welcomeMessage.value = `Welcome users from ${asn} ${org}, Good ${greeting}.`
+    }
+  } catch {
+    welcomeMessage.value = `Welcome, Good ${getGreeting()}.`
+  }
+}
 
 onMounted(() => {
   const tl = gsap.timeline({ delay: 0.8 })
@@ -68,6 +91,17 @@ onMounted(() => {
     ease: 'power2.out',
   })
 
+  // Welcome message
+  tl.from('.welcome-message', {
+    opacity: 0,
+    y: 15,
+    duration: 0.8,
+    ease: 'power2.out',
+  }, '-=0.4')
+
+  // Fetch visitor info
+  fetchLocationInfo()
+
   // Parallax on scroll
 
   gsap.to('.hero-bg-layer-2', {
@@ -101,12 +135,7 @@ const companyName = computed(() => t('hero.company'))
   <section id="hero" ref="heroRef" class="hero-section">
     <!-- Background Layers for Parallax -->
     <div class="hero-bg">
-      <div class="hero-bg-layer-2">
-        <!-- Decorative Circles -->
-        <div class="deco-circle deco-circle-1"></div>
-        <div class="deco-circle deco-circle-2"></div>
-        <div class="deco-circle deco-circle-3"></div>
-      </div>
+      <div class="hero-bg-layer-2"></div>
     </div>
 
     <!-- Main Content -->
@@ -130,6 +159,10 @@ const companyName = computed(() => t('hero.company'))
 
       <p class="hero-subtitle">
         {{ t('hero.subtitle') }}
+      </p>
+
+      <p v-if="welcomeMessage" class="welcome-message">
+        {{ welcomeMessage }}
       </p>
 
       <div class="hero-cta">
@@ -215,12 +248,12 @@ const companyName = computed(() => t('hero.company'))
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
   will-change: transform, opacity;
 }
 
 .hero-logo {
-  margin-bottom: 0;
+  margin-bottom: -8px;
 }
 
 .hero-logo-img {
@@ -260,6 +293,15 @@ const companyName = computed(() => t('hero.company'))
   max-width: 560px;
   line-height: 1.8;
   letter-spacing: 0.02em;
+}
+
+.welcome-message {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: var(--font-weight-light);
+  color: var(--color-accent-dark);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-top: 4px;
 }
 
 /* --- CTA Buttons --- */

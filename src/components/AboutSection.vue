@@ -161,8 +161,8 @@ onMounted(() => {
 .about-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: 40px;
+  margin-bottom: 60px;
   align-items: start;
 }
 
@@ -217,6 +217,8 @@ onMounted(() => {
   flex-direction: column;
   gap: 8px;
   transition: all var(--transition-smooth);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
 .stat-card:hover {
