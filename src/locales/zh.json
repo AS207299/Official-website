@@ -1,0 +1,73 @@
+{
+    "nav": {
+        "about": "关于",
+        "services": "服务",
+        "contact": "联系"
+    },
+    "hero": {
+        "company": "HAKURO NETWORK INC.",
+        "subtitle": "以精准与匠心，打造卓越数字体验",
+        "discover": "了解更多",
+        "getInTouch": "联系我们",
+        "scroll": "向下滚动"
+    },
+    "about": {
+        "title1": "重新定义",
+        "title2": "数字创新",
+        "description": "我们是一支充满热情的创作者、工程师和梦想家团队，致力于在数字领域突破无限可能。",
+        "paragraph1": "在 Hakuro Network Inc，我们坚信技术与艺术的完美融合。我们的使命是交付卓越的数字产品，为用户带来沉浸式体验，为客户创造切实的价值。",
+        "paragraph2": "从概念到上线，我们对每一个像素、每一次交互、每一行代码都精雕细琢。我们的理念植根于日式美学的精准哲学——简约与精致的完美邂逅。",
+        "innovation": "创新",
+        "precision": "精准",
+        "artistry": "匠心",
+        "stats": {
+            "projects": "已交付项目",
+            "team": "团队成员",
+            "satisfaction": "客户满意度",
+            "years": "卓越年份"
+        }
+    },
+    "services": {
+        "title": "我们的服务",
+        "subtitle": "我们提供端到端的数字解决方案，将创意转化为现实，融合技术专长与创意愿景。",
+        "asnBgp": {
+            "title": "ASN & BGP",
+            "description": "我们持有公共 ASN AS207299，并为客户提供 BGP 服务和 Transit 带宽销售。"
+        },
+        "webDev": {
+            "title": "网页开发",
+            "description": "使用前沿技术构建高性能、可扩展的 Web 应用，追求像素级完美设计。"
+        },
+        "mobile": {
+            "title": "移动应用",
+            "description": "打造原生与跨平台移动体验，在所有设备上实现流畅的用户交互。"
+        },
+        "design": {
+            "title": "UI/UX 设计",
+            "description": "以研究为基础、以艺术为导向、以严格测试为验证的精心界面设计。"
+        },
+        "cloud": {
+            "title": "云端方案",
+            "description": "专为可靠性、可扩展性和卓越运营而设计的强大基础架构。"
+        },
+        "ai": {
+            "title": "AI 集成",
+            "description": "基于机器学习、自然语言处理和计算机视觉的智能解决方案。"
+        }
+    },
+    "contact": {
+        "title1": "一起创造",
+        "title2": "非凡体验",
+        "subtitle": "准备开始您的下一个项目？我们期待与您交流。",
+        "name": "您的姓名",
+        "email": "您的邮箱",
+        "message": "请描述您的项目需求...",
+        "send": "发送消息",
+        "footer": {
+            "copy": "© 2026 Hakuro Network Inc. 保留所有权利。",
+            "privacy": "隐私政策",
+            "terms": "服务条款",
+            "careers": "加入我们"
+        }
+    }
+}

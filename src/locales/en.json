@@ -1,0 +1,73 @@
+{
+    "nav": {
+        "about": "About",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "hero": {
+        "company": "HAKURO NETWORK INC.",
+        "subtitle": "Crafting Digital Experiences with Precision & Artistry",
+        "discover": "Discover More",
+        "getInTouch": "Get in Touch",
+        "scroll": "SCROLL"
+    },
+    "about": {
+        "title1": "Redefining",
+        "title2": "Digital Innovation",
+        "description": "We are a passionate team of creators, engineers, and dreamers dedicated to pushing the boundaries of what's possible in the digital realm.",
+        "paragraph1": "At Hakuro Network Inc, we believe in the perfect fusion of technology and artistry. Our mission is to deliver exceptional digital products that captivate users and drive meaningful results for our clients.",
+        "paragraph2": "From concept to launch, we bring meticulous attention to every pixel, every interaction, and every line of code. Our philosophy is rooted in the Japanese aesthetic of precision — where simplicity meets sophistication.",
+        "innovation": "Innovation",
+        "precision": "Precision",
+        "artistry": "Artistry",
+        "stats": {
+            "projects": "Projects Delivered",
+            "team": "Team Members",
+            "satisfaction": "Client Satisfaction",
+            "years": "Years of Excellence"
+        }
+    },
+    "services": {
+        "title": "What We Do",
+        "subtitle": "We deliver end-to-end digital solutions that transform ideas into reality, combining technical expertise with creative vision.",
+        "asnBgp": {
+            "title": "ASN & BGP",
+            "description": "We are holding a public ASN AS207299 and we provide BGP services to our clients and selling transits."
+        },
+        "webDev": {
+            "title": "Web Development",
+            "description": "Building performant, scalable web applications with cutting-edge technologies and pixel-perfect design."
+        },
+        "mobile": {
+            "title": "Mobile Apps",
+            "description": "Native and cross-platform mobile experiences crafted for seamless user engagement across all devices."
+        },
+        "design": {
+            "title": "UI/UX Design",
+            "description": "Thoughtful interfaces grounded in research, elevated by artistry, and validated through rigorous testing."
+        },
+        "cloud": {
+            "title": "Cloud Solutions",
+            "description": "Robust infrastructure architecture designed for reliability, scalability, and operational excellence."
+        },
+        "ai": {
+            "title": "AI Integration",
+            "description": "Intelligent solutions powered by machine learning, natural language processing, and computer vision."
+        }
+    },
+    "contact": {
+        "title1": "Let's Create",
+        "title2": "Something Amazing",
+        "subtitle": "Ready to start your next project? We'd love to hear from you.",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Tell us about your project...",
+        "send": "Send Message",
+        "footer": {
+            "copy": "© 2026 Hakuro Network Inc. All rights reserved.",
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "careers": "Careers"
+        }
+    }
+}

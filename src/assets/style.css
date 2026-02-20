@@ -1,0 +1,283 @@
+/* ============================================
+   Hakuro Network Inc. — Global Styles
+   ============================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors from Logo */
+  --color-primary: #1a1a1a;
+  --color-bg: #f5f0e8;
+  --color-bg-dark: #ebe5d9;
+  --color-white: #ffffff;
+  --color-accent: #c8b89a;
+  --color-accent-light: #d9cdb5;
+  --color-accent-dark: #a89878;
+  --color-text: #2c2c2c;
+  --color-text-muted: #7a7468;
+  --color-text-light: #a09888;
+  --color-border: rgba(26, 26, 26, 0.1);
+
+  /* Section Dark (services, contact) */
+  --color-section-dark-bg: #1a1a1a;
+  --color-section-dark-text: #ffffff;
+
+  /* Typography */
+  --font-primary: 'Outfit', 'Noto Sans SC', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Spacing */
+  --section-padding: 120px;
+  --container-max: 1200px;
+  --container-padding: 40px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(26, 26, 26, 0.06);
+  --shadow-card-hover: 0 12px 40px rgba(26, 26, 26, 0.12);
+  --shadow-elevated: 0 20px 60px rgba(26, 26, 26, 0.15);
+
+  /* Nav blur */
+  --nav-bg-blur: rgba(245, 240, 232, 0.85);
+
+  /* Glass card */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Dark Mode --- */
+[data-theme='dark'] {
+  --color-primary: #f5f0e8;
+  --color-bg: #0e0e0e;
+  --color-bg-dark: #161616;
+  --color-white: #0e0e0e;
+  --color-accent: #c8b89a;
+  --color-accent-light: #d9cdb5;
+  --color-accent-dark: #e0d4bc;
+  --color-text: #e8e2d8;
+  --color-text-muted: #a09888;
+  --color-text-light: #7a7468;
+  --color-border: rgba(245, 240, 232, 0.1);
+
+  --color-section-dark-bg: #161616;
+  --color-section-dark-text: #e8e2d8;
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  --nav-bg-blur: rgba(14, 14, 14, 0.85);
+
+  --glass-bg: rgba(30, 30, 30, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: auto;
+  /* Lenis handles smooth scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* --- Container --- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* --- Section Common --- */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-dark {
+  background-color: var(--color-section-dark-bg);
+  color: var(--color-section-dark-text);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-light);
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.section-dark .section-subtitle {
+  color: var(--color-accent-light);
+}
+
+/* --- Reveal Animation Utility --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* --- Decorative Elements --- */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.accent-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* --- Diamond Sparkle (from Logo) --- */
+.sparkle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--color-accent);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.sparkle-lg {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- Glassmorphism Card --- */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+/* --- Selection --- */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dark);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px;
+    --container-padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 60px;
+    --container-padding: 16px;
+  }
+}
