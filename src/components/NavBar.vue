@@ -263,13 +263,17 @@ onUnmounted(() => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color-bg);
+    background: var(--nav-bg-blur);
+    backdrop-filter: blur(30px) saturate(1.5);
+    -webkit-backdrop-filter: blur(30px) saturate(1.5);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 120px;
     gap: 32px;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-smooth);
+    z-index: -1;
   }
 
   .nav-links.open {

@@ -268,13 +268,14 @@ const companyName = computed(() => t('hero.company'))
 }
 
 .hero-title {
-  font-size: clamp(1.6rem, 4vw, 3.2rem);
+  font-size: clamp(1.4rem, 5vw, 3.2rem);
   font-weight: var(--font-weight-black);
   letter-spacing: 0.12em;
-  line-height: 1.1;
+  line-height: 1.2;
   color: var(--color-primary);
   perspective: 500px;
-  white-space: nowrap;
+  /* Allow wrapping on small screens avoiding overflow */
+  text-align: center;
 }
 
 .hero-title .char {
@@ -398,6 +399,20 @@ const companyName = computed(() => t('hero.company'))
     width: 100%;
     max-width: 280px;
     justify-content: center;
+  }
+
+  .hero-logo-img {
+    width: 80vw;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 16px;
+  }
+  
+  .welcome-message {
+    font-size: 0.8rem;
+    padding: 0 16px;
   }
 
   .deco-circle-1 {
