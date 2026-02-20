@@ -58,7 +58,7 @@ onMounted(() => {
 
   // Parallax for decoration
   gsap.to('.about-deco-line', {
-    xPercent: 30,
+    xPercent: 90,
     ease: 'none',
     scrollTrigger: {
       trigger: '#about',
@@ -135,9 +135,9 @@ onMounted(() => {
 
 .about-deco-line {
   position: absolute;
-  top: 30%;
-  left: -10%;
-  width: 120%;
+  left: 0;
+  right: 0;
+  width: 90%;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -146,7 +146,7 @@ onMounted(() => {
     var(--color-accent) 70%,
     transparent 100%
   );
-  opacity: 0.2;
+  opacity: 0.35;
 }
 
 .about-header {
