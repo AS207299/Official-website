@@ -99,6 +99,11 @@ function handleMouseMove(e, index) {
     ease: 'power2.out',
     transformPerspective: 800,
   })
+
+  const percentX = (x / rect.width) * 100
+  const percentY = (y / rect.height) * 100
+  card.style.setProperty('--glow-x', `${percentX}%`)
+  card.style.setProperty('--glow-y', `${percentY}%`)
 }
 
 function handleMouseLeave(index) {
@@ -191,7 +196,7 @@ function handleMouseLeave(index) {
   opacity: 0;
   transition: opacity var(--transition-smooth);
   background: radial-gradient(
-    circle at 50% 0%,
+    circle at var(--glow-x, 50%) var(--glow-y, 50%),
     rgba(200, 184, 154, 0.1) 0%,
     transparent 70%
   );
