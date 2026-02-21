@@ -48,7 +48,7 @@
   --shadow-elevated: 0 20px 60px rgba(26, 26, 26, 0.15);
 
   /* Nav blur */
-  --nav-bg-blur: rgba(245, 240, 232, 0.5);
+  --nav-bg-blur: rgba(245, 240, 232, 0.85);
 
   /* Glass card */
   --glass-bg: rgba(255, 255, 255, 0.6);
@@ -76,7 +76,7 @@
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
   --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.5);
 
-  --nav-bg-blur: rgba(14, 14, 14, 0.9);
+  --nav-bg-blur: rgba(14, 14, 14, 0.85);
 
   --glass-bg: rgba(30, 30, 30, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -225,7 +225,7 @@ button {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
