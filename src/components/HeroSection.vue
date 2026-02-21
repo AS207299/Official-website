@@ -259,7 +259,7 @@ const companyName = computed(() => t('hero.company'))
 .hero-logo-img {
   width: min(800px, 60vw);
   height: auto;
-  filter: drop-shadow(0 10px 30px rgba(26, 26, 26, 0.15));
+  filter: invert(0) drop-shadow(0 10px 30px rgba(26, 26, 26, 0.15));
   transition: filter 0.3s ease;
 }
 
