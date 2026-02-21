@@ -201,7 +201,7 @@ function handleSubmit() {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.04);
-  color: var(--color-white);
+  color: var(--color-section-dark-text);
   font-family: var(--font-primary);
   font-size: 0.95rem;
   transition: all var(--transition-smooth);
