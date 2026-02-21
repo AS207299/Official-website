@@ -1,0 +1,76 @@
+:root {
+  /* Colors from Logo */
+  --color-primary: #1a1a1a;
+  --color-bg: #f5f0e8;
+  --color-bg-dark: #ebe5d9;
+  --color-white: #ffffff;
+  --color-accent: #c8b89a;
+  --color-accent-light: #d9cdb5;
+  --color-accent-dark: #a89878;
+  --color-text: #2c2c2c;
+  --color-text-muted: #7a7468;
+  --color-text-light: #a09888;
+  --color-border: rgba(26, 26, 26, 0.1);
+
+  /* Section Dark (services, contact) */
+  --color-section-dark-bg: #1a1a1a;
+  --color-section-dark-text: #ffffff;
+
+  /* Typography */
+  --font-primary: 'Outfit', 'Noto Sans SC', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Spacing */
+  --section-padding: 120px;
+  --container-max: 1200px;
+  --container-padding: 40px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(26, 26, 26, 0.06);
+  --shadow-card-hover: 0 12px 40px rgba(26, 26, 26, 0.12);
+  --shadow-elevated: 0 20px 60px rgba(26, 26, 26, 0.15);
+
+  /* Nav blur */
+  --nav-bg-blur: rgba(245, 240, 232, 0.85);
+
+  /* Glass card */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Dark Mode --- */
+[data-theme='dark'] {
+  --color-primary: #f5f0e8;
+  --color-bg: #0e0e0e;
+  --color-bg-dark: #161616;
+  --color-white: #0e0e0e;
+  --color-accent: #c8b89a;
+  --color-accent-light: #d9cdb5;
+  --color-accent-dark: #e0d4bc;
+  --color-text: #e8e2d8;
+  --color-text-muted: #a09888;
+  --color-text-light: #7a7468;
+  --color-border: rgba(245, 240, 232, 0.1);
+
+  --color-section-dark-bg: #161616;
+  --color-section-dark-text: #e8e2d8;
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  --nav-bg-blur: rgba(14, 14, 14, 0.85);
+
+  --glass-bg: rgba(30, 30, 30, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}

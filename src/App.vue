@@ -9,6 +9,7 @@ import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import Footer from './components/Footer.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -52,6 +53,7 @@ onUnmounted(() => {
       <ServicesSection />
       <ContactSection />
     </main>
+    <Footer />
   </div>
 </template>
 

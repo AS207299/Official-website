@@ -1,0 +1,77 @@
+.footer-section {
+  position: relative;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+
+  .footer-deco {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    .footer-deco-circle {
+      position: absolute;
+      right: -60px;
+      bottom: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 184, 154, 0.1);
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .footer-logo {
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.15em;
+      }
+
+      .footer-logo-sub {
+        font-size: 0.7rem;
+        font-weight: var(--font-weight-light);
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-build {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+
+      .build-item {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 0.02em;
+      }
+
+      .build-sep {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
