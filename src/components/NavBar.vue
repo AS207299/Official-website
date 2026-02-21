@@ -120,6 +120,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
+  transition: background-color 0.3s ease;
   background: var(--nav-bg-blur);
   backdrop-filter: blur(30px) saturate(1.5);
   -webkit-backdrop-filter: blur(30px) saturate(1.5);

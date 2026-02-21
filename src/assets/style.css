@@ -158,6 +158,7 @@ button {
 }
 
 .section-dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
   background-color: var(--color-section-dark-bg);
   color: var(--color-section-dark-text);
 }
